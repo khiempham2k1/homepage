@@ -116,12 +116,13 @@ ul.devided > li:last-child {
 .mega-content {
 	display : none;
 	position : absolute;
+	top: 50px;
 	min-width : 100%;
 	padding : 10px;
 	z-index : 2;
-	color : #1f2024;
+	color : #666;
 	background-color : #ffffff;
-	box-shadow : 0 7px 29px 0 rgb(100, 100, 111, 0.2);
+	box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
 	transition : all 0.4s cubic-bezier(0.77,0,0.175,1);
 }
 .mega-dropdown:hover .mega-content {
@@ -227,6 +228,9 @@ ul.devided > li:last-child {
 .product{
 	margin-bottom: 150px;
 }
+.product-sale{
+	margin-bottom: 100px;
+}
 .product-row .product-item {
 	position : relative;
 }
@@ -267,6 +271,7 @@ ul.devided > li:last-child {
 }
 .rating span {
 	font-size : 11px;
+	color: #a4a4a4;
 }
 .price {
 	margin-top : 10px;
@@ -275,11 +280,15 @@ ul.devided > li:last-child {
 	margin-left: 10px;
 	font-size : 13px;
 	font-weight : 400;
+	color: #a4a4a4;
 	text-decoration-line : line-through;
 }
 .price-new {
 	color : #cc1414;
 	font-weight : 500;
+}
+.price-final{
+	color: #111111;
 }
 .categories {
 	position : relative;
@@ -292,6 +301,9 @@ ul.devided > li:last-child {
 	display : grid;
 	grid-template-columns : auto 48.9% auto;
 	gap : 20px;
+}
+.categories-button{
+	margin-top: 40px;
 }
 .categories-button a {
 	width : 250px;
@@ -335,7 +347,9 @@ ul.devided > li:last-child {
 .categories-text-left {
 	margin-right : 15px;
 }
-
+.shipping{
+	margin-bottom: 80px;
+}
 .shipping p {
 	font-size : 16px;
 	text-align : center;
@@ -402,9 +416,8 @@ ul.devided > li:last-child {
 }
 .reviews{
 	margin-bottom: 170px;
-}
-.reviews-content .media {
-	padding : 35px 45px;
+	padding-left: 0;
+	padding-right: 0;
 }
 .media-title span {
 	margin-left : 15px;
@@ -417,13 +430,18 @@ ul.devided > li:last-child {
 	background-repeat : no-repeat;
 }
 .media {
-	padding : 45px 55px;
+	padding: 38px 45px 38px 38px;
 	margin : 20px 0;
 	box-shadow : 0 3px 20px rgb(0, 0, 0, 0.3);
 	border-radius : 5px;
 }
+.media:nth-child(2){
+	margin-left: 65px;
+	margin-right: -35px;
+}
 .media-body p {
 	font-size : 14px;
+	color: #666;
 }
 .reviews-discount {
 	margin-left : 50px;
@@ -777,6 +795,10 @@ footer {
 	}
 	.reviews .reviews-discount{
 		text-align: left;
+	}
+	.media:nth-child(2){
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.discount-content{
 		top: 8%;
