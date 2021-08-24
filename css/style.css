@@ -708,18 +708,6 @@ footer {
 .text-ic {
 	margin-right : 15px;
 }
-img.image-load{
-	animation: 0.4s ease-out 0s 1 normal forwards running fadeIn;
-}
-@keyframes fadeIn {
-	0%{
-		opacity: 0;
-	}
-	to{
-		opacity: 1;
-	}
-}
-
 /* responsive */
 @media only screen and (max-width: 1439px) {
 	.hero-text h2{
