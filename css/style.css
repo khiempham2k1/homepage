@@ -842,6 +842,7 @@ img.image-load{
 	}
     .mid-header {
 		display: block;
+		padding: 0;
     }
     .bottom-header {
         -webkit-box-pack: start;
