@@ -26,11 +26,6 @@ li {
 .active {
 	color : #fa5d2a;
 }
-body .container{
-	max-width : 1440px;
-	padding-left: 50px;
-	padding-right: 50px;
-}
 .bg-second {
 	padding : 0 30px;
 	background-color : #1f2024;
@@ -44,11 +39,6 @@ body .container{
 }
 .top-header a {
 	font-size : 13px;
-}
-ul.devided > li {
-	/* margin-left : 10px;
-	padding-right : 10px;
-	border-right : 1px solid; */
 }
 ul.devided > li:not(:last-child) {
 	padding-right: 1rem;
@@ -683,8 +673,11 @@ footer {
 	margin-top : 0;
 	margin-bottom : 20px;
 }
+.footer-about-store{
+	flex: 2;
+	max-width: 510px;
+}
 .footer-bottom {
-	margin : 0 25px;
 	border-top : 1px solid #ebebeb;
 }
 .footer-content {
@@ -774,10 +767,6 @@ footer {
 	}
 }
 @media only screen and (max-width: 1023px) {
-	body .container{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
 	.bg-main{
 		padding: 0;
 	}
@@ -1086,5 +1075,17 @@ footer {
 	}
 	.social-media p{
 		display: none;
+	}
+}
+@media (min-width:1200px){
+	body .container{
+		max-width: 1440px;
+	}
+}
+@media (min-width:768px){
+	body .container{
+		width: 95% !important;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
