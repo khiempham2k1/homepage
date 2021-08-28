@@ -23,16 +23,22 @@ ul {
 li {
 	list-style-type : none;
 }
+h1, h2, h3, h4, h5, h6{
+	margin-bottom: 0;
+}
 .active {
 	color : #fa5d2a;
 }
+.container-header{
+	max-width: 1860px;
+    margin: auto;
+}
 .bg-second {
-	padding : 0 30px;
 	background-color : #1f2024;
 	color : #ffffff;
 }
 .top-header {
-	height : 40px;
+	padding: 12px 0;
 	color : #999;
 	display: flex;
 	justify-content : space-between;
@@ -72,9 +78,6 @@ ul.devided > li:not(:first-child) {
 }
 .dropdown-content > li > a:hover {
 	color : #fa5d2a;
-}
-.bg-main {
-	padding : 0 30px;
 }
 .mid-header {
 	display: flex;
@@ -134,10 +137,11 @@ ul.devided > li:not(:first-child) {
 .mega-content {
 	display : none;
 	position : absolute;
-	top: 50px;
-	min-width : 100%;
+	top: 48px;
+	width : 100%;
 	padding : 10px;
 	z-index : 2;
+	cursor: pointer;
 	color : #666;
 	background-color : #ffffff;
 	box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 10%);
@@ -156,19 +160,31 @@ ul.devided > li:not(:first-child) {
 	position: relative;
 	overflow: hidden;
 }
-.hero-items {
+.hero .hero-items {
 	position : relative;
 	line-height: 0;
 }
 .hero .hero-items .hero-text {
-	position : absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	padding-left: 80px;
-	line-height: 1.3;
-	align-items : flex-end;
-	color : #ffffff;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.3;
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	padding: 40px 0;
+	color: #fff;
+}
+.hero .hero-items .hero-text.right_center{
+	align-items: flex-end;
+    justify-content: center;
+    text-align: right
+}
+.hero .hero-items .hero-text.right_center{
+	width: 40%;
 }
 .hero-text span {
 	font-size : 13px;
@@ -202,12 +218,17 @@ ul.devided > li:not(:first-child) {
 	padding : 14.5px 45px;
 	text-transform: uppercase;
 	font-weight: bold;
+	border-radius: 2px;
 	background-color : #ffffff;
 	color : #111111;
 	border : none;
 }
 .hero-mb {
 	display : none;
+}
+div[class*=col]{
+	padding-left: 0;
+	padding-right: 0;
 }
 .banner{
 	margin-bottom: 80px;
@@ -216,37 +237,66 @@ ul.devided > li:not(:first-child) {
 .banner-body {
 	position : relative;
 	background-color : #ffffff;
-
-	padding : 10px;
+	border-radius: 2px;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+.banner-item{
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+.banner-item img{
+	border-radius: 2px;
 }
 .title {
 	font-size : 30px;
 }
 .filter-controls {
-	text-align : center;
-	padding : 45px 0;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding-top: 38px;
+    padding-bottom: 48px;
 }
-.filter-controls li {
-	color : #777777;
+.filter-controls{
+	list-style: none;
+	color : #666;
 	font-size : 16px;
-	font-weight : 500;
-	list-style : none;
-	display : inline-block;
-	margin-right : 40px;
-	cursor : pointer;
+}
+.filter-controls li:not(:first-child){
+	padding-left: 15px;
+}
+.filter-controls li:not(:last-child){
+	padding-right: 15px;
+}
+.filter-controls li a{
+	position: relative;
+	padding-bottom: 10px;
+}
+.filter-controls .active {
+	color: #fa5d2a;
+}
+.filter-controls .active a::after{
+	color: #fa5d2a;
+	border-bottom: 2px solid;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 2.5rem;
+	content: '';
 }
 .filter-controls li:last-child {
 	margin-right : 0;
-}
-.filter-controls li.active {
-	color : #f38a00;
-	border-bottom : 3px solid #f38a00;
 }
 .product{
 	margin-bottom: 150px;
 }
 .product-sale{
 	margin-bottom: 100px;
+}
+.product-row .product-item{
+	padding: 20px;
 }
 .product-row .product-item {
 	position : relative;
@@ -329,7 +379,6 @@ ul.devided > li:not(:first-child) {
 	text-transform : uppercase;
 	font-weight : 600;
 	border : #fa5d2a solid 3px;
-	background-color : #ffffff;
 }
 .categories-banner .categories-item {
 	position : relative;
@@ -374,6 +423,9 @@ ul.devided > li:not(:first-child) {
 	color : #ffffff;
 	border : #fa5d2a solid 1px;
 	background-color : #fa5d2a;
+}
+.product .title h3{
+	font-weight: 300 !important;
 }
 .product-title, .blog-title {
 	justify-content : space-between;
@@ -446,6 +498,10 @@ ul.devided > li:not(:first-child) {
 	background-repeat : no-repeat;
 	margin-bottom: 170px;
 }
+.reviews-content{
+	padding-right: 15px;
+	padding-left: 15px;
+}
 .media-title span {
 	margin-left : 15px;
 	font-size : 13px;
@@ -472,8 +528,7 @@ ul.devided > li:not(:first-child) {
 	margin-left: 10px;
 }
 .media:nth-child(2){
-	margin-left: 65px;
-	margin-right: -35px;
+	margin-left: 72px;
 }
 .media-body p {
 	font-size : 14px;
@@ -542,9 +597,6 @@ ul.devided > li:not(:first-child) {
 	background : #ffffff;
 	box-shadow : 0 5px 20px rgb(206, 206, 206, 0.5);
 }
-.blog-post-thumb img{
-	width: 100%;
-}
 .blog-item-row .col {
 	padding : 10px;
 }
@@ -580,8 +632,8 @@ ul.devided > li:not(:first-child) {
 .post-bottom {
 	justify-content : space-between;
 	border-top : 1px solid #8a8787;
-	margin-top : 15px;
-	padding : 15px 0;
+	margin-top : 20px;
+	padding-top: 20px;
 }
 .post-bottom span {
 	font-size : 13px;
@@ -645,10 +697,6 @@ input[type="email"] {
 }
 .instagram{
 	margin-bottom: 70px;
-}
-.instagram .instagram-list .col {
-	padding : 0 0;
-	outline : none;
 }
 .ins-icon {
 	justify-content : center;
@@ -767,9 +815,6 @@ footer {
 	}
 }
 @media only screen and (max-width: 1023px) {
-	.bg-main{
-		padding: 0;
-	}
 	.banner{
 		margin-left: 15px;
 		margin-right: 15px;
@@ -880,10 +925,12 @@ footer {
 	}
 	.media:nth-child(2){
 		margin-left: 0;
-		margin-right: 0;
 	}
 }
 @media only screen and (max-width: 991px){
+	.container-header {
+        width: 100%
+    }
 	.hero .hero-items .hero-text{
 		padding-left: 20px;
 	}
@@ -992,7 +1039,10 @@ footer {
 	}
 }
 @media  only screen and (max-width: 575px) {
-	.hero .hero-items .hero-text{
+	.hero .hero-items .hero-text.right_center{
+		width: 100%;
+	}
+	.hero .hero-items .hero-text.right_center{
 		align-items: flex-start;
 		padding-left: 10px;
 		line-height: 0.8;
@@ -1007,8 +1057,17 @@ footer {
 	.hero-text p{
 		font-size : 13px;
 	}
-	.banner-body .my-3{
-		margin-bottom: 0 !important;
+	.filter-controls .active a::after{
+		border-bottom: none;
+	}
+	.filter-controls{
+		justify-content: unset;
+		white-space: nowrap;
+		overflow-y: hidden;
+		margin-bottom: 0;
+	}
+	.rating span{
+		display: -webkit-box;
 	}
 	.list-unstyled .media{
 		display: -webkit-box;
@@ -1081,11 +1140,19 @@ footer {
 	body .container{
 		max-width: 1440px;
 	}
+	.container-header{
+		max-width: 1860px;
+		width: 95%;
+		margin: auto;
+	}
 }
 @media (min-width:768px){
 	body .container{
 		width: 95% !important;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.container-header{
+		width: 95%;
 	}
 }
