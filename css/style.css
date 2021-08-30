@@ -1100,7 +1100,7 @@ footer {
 }
 
 @media only screen and (max-width: 1023px) {
-    .hero-text{
+     .hero-text{
         margin-bottom: 0px;
     }
     .banner {
@@ -1409,7 +1409,7 @@ footer {
         align-items: flex-start;
         padding-left: 10px;
         line-height: 0.8;
-        padding-top: 10px;
+        margin: 40px 0;
     }
 
     .hero-text h2 {
