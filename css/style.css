@@ -258,7 +258,6 @@ ul.devided>li:not(:first-child) {
     font-weight: 500;
     text-transform: uppercase;
     padding: 5px 15px;
-    margin-top: 40px;
     margin-bottom: 40px;
     background: #fdc801;
     color: #111111;
@@ -306,7 +305,7 @@ div[class*=col] {
 
 .banner {
     margin-bottom: 60px;
-    margin-top: -90px;
+    margin-top: -120px;
 }
 
 .banner-body {
@@ -392,7 +391,6 @@ div[class*=col] {
 .product-sale {
     margin-bottom: 100px;
 }
-
 .product-item img {
     margin: auto;
     max-width: 100%;
@@ -1023,6 +1021,9 @@ footer {
 
 /* responsive */
 @media only screen and (max-width: 1439px) {
+    .hero-text{
+        margin-bottom: 40px;
+    }
     .hero-text h2 {
         font-size: 68px;
         margin-top: 0;
@@ -1043,6 +1044,10 @@ footer {
 
     .hero-text a {
         margin-top: 1.73611111vw;
+    }
+
+    .banner{
+        margin-top: -90px;
     }
 
     .discount-content h1 {
@@ -1095,6 +1100,9 @@ footer {
 }
 
 @media only screen and (max-width: 1023px) {
+    .hero-text{
+        margin-bottom: 0px;
+    }
     .banner {
         margin-left: 15px;
         margin-right: 15px;
@@ -1405,6 +1413,7 @@ footer {
     }
 
     .hero-text h2 {
+        letter-spacing: 0;
         font-size: 28px;
     }
 
