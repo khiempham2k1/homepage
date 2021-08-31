@@ -123,18 +123,22 @@ ul.devided>li:not(:first-child) {
 .mid-header {
     display: flex;
     justify-content: space-between;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .user-menu {
     display: flex;
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
-.user-menu>li>a{
+.user-menu li{
     font-size: 24px;
     margin-right: 30px;
+}
+
+.user-menu >li:last-child{
+    margin-right: 0;
 }
 
 .user-menu li>a {
@@ -1274,8 +1278,8 @@ footer {
         display: none;
     }
 
-    .user-menu>li>a {
-        margin-right: 8px;
+    .user-menu li {
+        margin-right: 10px;
     }
 
     .mid-header>.user-menu {
@@ -1296,9 +1300,6 @@ footer {
 }
 
 @media only screen and (max-width: 991px) {
-    .container-header {
-        width: 100%
-    }
 
     .hero .hero-items .hero-text {
         padding-left: 20px;
@@ -1388,9 +1389,6 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-    .container-header {
-        width: 100%;
-    }
 
     .hero-text h2 {
         font-size: 36px;
@@ -1547,8 +1545,9 @@ footer {
     .mb-logo{
         padding: 0;
     }
-    .user-menu li>a {
-        margin-left: 0;
+
+    .user-menu li{
+        margin-right: 5px;
     }
 
     .user-menu .bx-search {
@@ -1705,6 +1704,11 @@ footer {
     body .page-container {
         max-width: 1440px;
     }
+    .container-header {
+        max-width: 1860px;
+        width: 95%;
+        margin: auto;
+    }
 }
 
 @media (min-width:768px) {
@@ -1712,5 +1716,8 @@ footer {
         width: 95% !important;
         margin-left: auto;
         margin-right: auto;
+    }
+    .container-header {
+        width: 95%;
     }
 }
