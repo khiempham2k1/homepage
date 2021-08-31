@@ -1352,12 +1352,22 @@ footer {
         font-size: 13px;
         padding: 8.5px 25px;
         margin-top: 3.25520833vw;
-    }
+    }    
 
     .banner {
         margin-top: 0;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .banner-item{
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .banner-body{
+        padding-left: 15px;
+        padding-top: 15px;
     }
 
     .text-ic,
@@ -1431,8 +1441,8 @@ footer {
         margin-left: 0;
     }
 
-    .user-menu .bx-shopping-bag {
-        margin-left: 10px;
+    .user-menu .bx-search {
+        margin-right: 10px;
     }
 
     .hero .hero-items .hero-text.right_center {
@@ -1441,7 +1451,7 @@ footer {
 
     .hero .hero-items .hero-text.right_center {
         align-items: flex-start;
-        padding-left: 10px;
+        padding-left: 15px;
         line-height: 0.8;
         margin: 40px 0;
     }
